@@ -1,0 +1,19 @@
+function NBR_VALID = NSA_NBR_VALID(IND, ZONE, m)
+
+[rr cc]=size(ZONE); 
+S=[rr,cc]; I=1;
+
+% if  ZONE(IND-1)== max(ZONE(:))||ZONE(IND+1)== max(ZONE(:))|| ...
+%     ZONE(IND-rr)== max(ZONE(:))||ZONE(IND+rr)== max(ZONE(:))||...    
+%     ZONE((IND-rr)-1)== max(ZONE(:))||ZONE((IND-rr)+1)== max(ZONE(:))|| ...
+%     ZONE((IND+rr)-1)== max(ZONE(:))||ZONE((IND+rr)+1)== max(ZONE(:)),
+
+if  ZONE(IND-1)== m||ZONE(IND+1)== m|| ...
+    ZONE(IND-rr)== m||ZONE(IND+rr)== m||...    
+    ZONE((IND-rr)-1)== m||ZONE((IND-rr)+1)== m|| ...
+    ZONE((IND+rr)-1)== m||ZONE((IND+rr)+1)== m,
+    
+    NBR_VALID=1;
+else
+    NBR_VALID=0;
+end

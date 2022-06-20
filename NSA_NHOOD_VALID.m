@@ -1,0 +1,6 @@
+function NHOOD_VALID = NSA_NHOOD_VALID(ZWINDOW)
+
+NHOOD_VALID=prod(ZWINDOW(:));
+    
+end
+
